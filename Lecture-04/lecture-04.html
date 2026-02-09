@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Student Portfolio – Semantic HTML</title>
+</head>
+
+<body>
+
+  <!-- Skip link for accessibility -->
+  <a href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header>
+    <h1>Jules Duplantier</h1>
+    <p>
+      IOT student <br>
+      Kuopio, Finland
+    </p>
+  </header>
+
+  <!-- Main content -->
+  <main id="main">
+
+    <!-- Portfolio Section -->
+    <section aria-labelledby="portfolio-heading">
+      <h2 id="portfolio-heading">Portfolio & Works</h2>
+
+      <!-- Project 1 -->
+      <article>
+        <h3>Personal Website Project</h3>
+        <button id="themeBtn">Toggle theme</button>
+        <button id="clickBtn">Click me</button>
+        <figure>
+          <img src="Photo CV.jpg" 
+            width="375"
+            height="500"
+            alt="Portrait photo of Jules Duplantier">
+          <figcaption>Profile photo</figcaption>
+        </figure>
+        <p>
+          <a href="https://github.com/JulesDupl/browser-programming">GitHub Repository</a>
+        </p>
+
+        <figure>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/qp0SIJNtIKM?si=VRXORERvvJEWuMtq" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+          <figcaption>Video </figcaption>
+        </figure>
+      </article>
+
+    <!-- Interests Section -->
+    <section aria-labelledby="interests-heading">
+      <h2 id="interests-heading">Areas of Interest</h2>
+
+      <ul>
+        <li>Semantic HTML and web accessibility</li>
+        <li>Climbing</li>
+        <li>Basketball</li>
+        <li>Hiking</li>
+        <li>Photography and digital media</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h2>Contact & Social Media</h2>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/jules-duplantier-334480261/">LinkedIn</a></li>
+      <li><a href="https://github.com/JulesDupl">GitHub</a></li>
+    </ul>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

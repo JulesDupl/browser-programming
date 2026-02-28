@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css\style.css">
+  <title>Student Portfolio – Jules Duplantier</title>
+</head>
+
+<body>
+
+  <!-- Skip link for accessibility -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Header -->
+  <header>
+    <h1>Jules Duplantier</h1>
+    <p>
+      IOT student <br>
+      Kuopio, Finland
+    </p>
+    <button id="themeBtn" class="theme-btn">Toggle Theme</button>
+  </header>
+
+  <!-- Main content -->
+  <main id="main">
+
+    <!-- Portfolio Section -->
+    <section aria-labelledby="portfolio-heading">
+      <h2 id="portfolio-heading">Portfolio &amp; Works</h2>
+
+      <!-- Project 1 -->
+      <article>
+        <h3>Personal Website Project</h3>
+        <button id="clickBtn">Energy Pulse</button>
+        <figure>
+          <img src="Photo CV.jpg" 
+            width="375"
+            height="500"
+            alt="Portrait photo of Jules Duplantier">
+          <figcaption>Profile photo</figcaption>
+        </figure>
+        <p>
+          <a href="https://github.com/JulesDupl/browser-programming">GitHub Repository</a>
+        </p>
+
+        <figure>
+          <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/qp0SIJNtIKM?si=VRXORERvvJEWuMtq" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+          <figcaption>Video</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <!-- Skills Section -->
+    <section aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <span class="skill-icon">⟨/⟩</span>
+          <span class="skill-name">HTML</span>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">#</span>
+          <span class="skill-name">CSS</span>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">JS</span>
+          <span class="skill-name">JavaScript</span>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🐍</span>
+          <span class="skill-name">Python</span>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">📡</span>
+          <span class="skill-name">IoT</span>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🔗</span>
+          <span class="skill-name">Git</span>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🐧</span>
+          <span class="skill-name">Linux</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+
+      <article class="project-card">
+        <h3>Browser Programming Portfolio</h3>
+        <p>A personal portfolio website built with semantic HTML, CSS, and vanilla JavaScript. Features a cyberpunk dark theme with a smooth light/dark mode toggle and interactive elements.</p>
+        <a href="https://github.com/JulesDupl/browser-programming" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+
+      <article class="project-card">
+        <h3>IoT Sensor Dashboard</h3>
+        <p>A web-based dashboard for monitoring IoT sensor data in real time. Built using Python for data collection and a lightweight frontend for visualization and alerting.</p>
+        <a href="https://github.com/JulesDupl" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+    </section>
+
+    <!-- Interests Section -->
+    <section aria-labelledby="interests-heading">
+      <h2 id="interests-heading">Areas of Interest</h2>
+      <ul>
+        <li>Semantic HTML and web accessibility</li>
+        <li>Climbing</li>
+        <li>Basketball</li>
+        <li>Hiking</li>
+        <li>Photography and digital media</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h2>Contact &amp; Social Media</h2>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/jules-duplantier-334480261/">LinkedIn</a></li>
+      <li><a href="https://github.com/JulesDupl">GitHub</a></li>
+    </ul>
+    <p id="last-updated" class="last-updated"></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

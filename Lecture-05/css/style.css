@@ -1,0 +1,298 @@
+:root {
+    --bg-main: #050505;
+    --bg-panel: #111111;
+    --text-primary: #e0e0e0;
+    --neon-cyan: #00f3ff;
+    --neon-pink: #ff00ff;
+    --grid-color: rgba(0, 243, 255, 0.07);
+}
+
+/* ===== LIGHT MODE ===== */
+body.light {
+    --bg-main: #f0f4f8;
+    --bg-panel: #ffffff;
+    --text-primary: #1a1a2e;
+    --grid-color: rgba(0, 0, 0, 0.04);
+    --neon-cyan: #0055cc;
+    --neon-pink: #cc0099;
+}
+
+/* ===== BASE ===== */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.7;
+    margin: 0;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    background-image:
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--neon-cyan);
+    color: #000;
+    padding: 8px;
+    z-index: 100;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--neon-pink);
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header, footer {
+    background-color: var(--bg-panel);
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.1) inset;
+    transition: background-color 0.4s ease;
+}
+
+/* ===== BUTTONS ===== */
+.theme-btn {
+    margin-top: 16px;
+    padding: 10px 24px;
+    background: transparent;
+    color: var(--neon-cyan);
+    border: 2px solid var(--neon-cyan);
+    font-family: 'Arial Black', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: var(--neon-cyan);
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+}
+
+button {
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--neon-pink);
+    border: 2px solid var(--neon-pink);
+    font-family: 'Arial Black', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background: var(--neon-pink);
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+}
+
+/* ===== SECTIONS ===== */
+section {
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: var(--bg-panel);
+    border: 1px solid #222;
+    border-left: 4px solid var(--neon-cyan);
+    transition: background-color 0.4s ease;
+}
+
+/* ===== IMAGES ===== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #333;
+    filter: grayscale(40%) contrast(120%);
+    transition: all 0.5s ease;
+}
+
+img:hover {
+    filter: grayscale(0%) contrast(100%);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+}
+
+/* ===== LINKS ===== */
+a {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 8px rgba(255, 0, 255, 0.4);
+}
+
+/* ===== LISTS ===== */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+ul li::before {
+    content: '▸';
+    color: var(--neon-cyan);
+    position: absolute;
+    left: 0;
+}
+
+footer ul li::before {
+    content: none;
+}
+
+/* ===== SKILLS GRID ===== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.skill-card {
+    background-color: #1a1a1a;
+    border: 1px solid rgba(0, 243, 255, 0.25);
+    padding: 20px 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+body.light .skill-card {
+    background-color: #eef2f8;
+    border-color: rgba(0, 85, 204, 0.25);
+}
+
+.skill-card:hover {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 14px rgba(0, 243, 255, 0.25);
+    transform: translateY(-4px);
+}
+
+.skill-icon {
+    font-size: 1.5rem;
+    color: var(--neon-cyan);
+    font-weight: bold;
+    font-family: 'Arial Black', monospace;
+}
+
+.skill-name {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+}
+
+/* ===== PROJECT CARDS ===== */
+.project-card {
+    background-color: #1a1a1a;
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    border-left: 4px solid var(--neon-pink);
+    padding: 24px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+body.light .project-card {
+    background-color: #eef2f8;
+}
+
+.project-card:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.15);
+    transform: translateX(4px);
+}
+
+.project-card h3 {
+    color: var(--neon-cyan);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.project-card p {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.project-card a {
+    color: var(--neon-pink);
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== LAST UPDATED ===== */
+.last-updated {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ===== IFRAME ===== */
+figure {
+    margin: 20px 0;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border: 2px solid #333;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.6;
+    margin-top: 8px;
+}

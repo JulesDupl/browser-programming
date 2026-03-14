@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App – Jules Duplantier</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/weather.css">
+</head>
+<body>
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header>
+        <h1>Weather Terminal</h1>
+        <p>Live atmospheric data feed</p>
+        <nav>
+            <a href="lecture-07.html" class="nav-back">← Back to Portfolio</a>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <section aria-labelledby="weather-heading">
+            <h2 id="weather-heading">Select a City</h2>
+
+            <div class="city-grid">
+                <button class="city-btn" data-city="Kuopio"    data-lat="62.8924" data-lon="27.6770">Kuopio</button>
+                <button class="city-btn" data-city="Helsinki"  data-lat="60.1699" data-lon="24.9384">Helsinki</button>
+                <button class="city-btn" data-city="Turku"     data-lat="60.4518" data-lon="22.2666">Turku</button>
+                <button class="city-btn" data-city="Paris"     data-lat="48.8566" data-lon="2.3522">Paris</button>
+            </div>
+        </section>
+
+        <section aria-labelledby="result-heading" id="weather-section">
+            <h2 id="result-heading">Weather Data</h2>
+
+            <p id="weather-status" class="api-status" aria-live="polite">Select a city to load data.</p>
+
+            <div id="weatherBox" class="weather-card" hidden>
+                <div class="weather-city-name" id="city">—</div>
+                <div class="weather-metrics">
+                    <div class="weather-metric">
+                        <span class="metric-icon">🌡</span>
+                        <span class="metric-label">Temperature</span>
+                        <span class="metric-value" id="temperature">—</span>
+                    </div>
+                    <div class="weather-metric">
+                        <span class="metric-icon">💨</span>
+                        <span class="metric-label">Wind Speed</span>
+                        <span class="metric-value" id="wind">—</span>
+                    </div>
+                </div>
+            </div>
+
+            <pre id="output" class="weather-log"></pre>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Data from <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo API</a> — free & open source</p>
+        <p id="last-updated" class="last-updated"></p>
+    </footer>
+
+    <script src="weather.js"></script>
+</body>
+</html>
